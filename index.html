@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Алгоритм Флойда-Уоршелла</title>
+</head>
+<body>
+<div class="primary-container">
+    <div class="secondary-container">
+        <h1>Алгоритм Флойда-Уоршелла</h1>
+        <canvas id="canvas"></canvas>
+    </div>
+    <div class="secondary-container">
+        <h2>Добавление вершин</h2>
+        <input type="number" id="number-nodes-input" placeholder="Количество вершин">
+        <button id="add-vertices-button">Добавить вершины</button>
+        <h2>Добавление ребра</h2>
+        <input type="text" id="source-input" placeholder="Из вершины">
+        <input type="text" id="target-input" placeholder="В вершину">
+        <input type="number" id="weight-input" placeholder="Вес">
+        <button id="add-edge-button">Добавить ребро</button>
+        <button id="run-algorithm-button">Запустить алгоритм Флойда-Уоршелла</button>
+    </div>
+    <div class="secondary-container">
+        <h2>Матрица расстояний (шаг за шагом)</h2>
+        <div id="distances-container"></div>
+    </div>
+    <div class="secondary-container">
+        <h2>Об алгоритме</h2>
+        <p>Алгоритм Флойда-Уоршелла находит кратчайшие пути между всеми парами вершин во взвешенном графе.
+            Граф может содержать как положительные, так и отрицательные веса ребер (но не циклы отрицательной длины).
+            Алгоритм постепенно улучшает оценки кратчайших путей, учитывая все вершины как промежуточные.</p>
+    </div>
+</div>
+<script src="js/core.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
